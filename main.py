@@ -56,18 +56,21 @@ def fifth_task():
     plt.show()
 
 def main():
-    choice = int(input('Enter number of task: '))
-    match choice:
-        case 1:
-            first_task()
-        case 2:
-            second_task()
-        case 3:
-            third_task()
-        case 4:
-            fourth_task()
-        case 5:
-            fifth_task()
+    while True:
+        choice = int(input('Enter number of task(0-5, 0 - quit): '))
+        match choice:
+            case 0:
+                quit()
+            case 1:
+                first_task()
+            case 2:
+                second_task()
+            case 3:
+                third_task()
+            case 4:
+                fourth_task()
+            case 5:
+                fifth_task()
 
 if __name__ == '__main__':
     main()
